@@ -49,15 +49,15 @@ puts p2.falar("Hello!!")
 puts ("_______________________________") 
 puts "\n"
 
-p2 = PessoaJuridica.new
+p3 = PessoaJuridica.new
 # setter
-p2.nome = "Videos de TI"
-p2.email = "VTI@vti.com"
-p2.cnpj = "4324342434"
+p3.nome = "Videos de TI"
+p3.email = "VTI@vti.com"
+p3.cnpj = "4324342434"
 
 ## getter
-puts p2.nome
-puts p2.email
-puts p2.cnpj
+puts p3.nome
+puts p3.email
+puts p3.cnpj
 
-puts p2.pagar_fornecedor
+puts p3.pagar_fornecedor
