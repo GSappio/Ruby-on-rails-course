@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Minig Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Acronym</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @minig_types.each do |minig_type| %>
+      <tr>
+        <td><%= minig_type.name %></td>
+        <td><%= minig_type.acronym %></td>
+        <td><%= link_to 'Show', minig_type %></td>
+        <td><%= link_to 'Edit', edit_minig_type_path(minig_type) %></td>
+        <td><%= link_to 'Destroy', minig_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Minig Type', new_minig_type_path %>

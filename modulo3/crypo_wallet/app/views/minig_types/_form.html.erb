@@ -1,0 +1,27 @@
+<%= form_with(model: minig_type) do |form| %>
+  <% if minig_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(minig_type.errors.count, "error") %> prohibited this minig_type from being saved:</h2>
+
+      <ul>
+        <% minig_type.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

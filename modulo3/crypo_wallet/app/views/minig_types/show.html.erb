@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @minig_type.name %>
+</p>
+
+<p>
+  <strong>Acronym:</strong>
+  <%= @minig_type.acronym %>
+</p>
+
+<%= link_to 'Edit', edit_minig_type_path(@minig_type) %> |
+<%= link_to 'Back', minig_types_path %>
