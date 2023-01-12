@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :minig_types
+  resources :mining_types
   get 'welcome/index'
   get '/inicio', to: 'welcome#index'
   
