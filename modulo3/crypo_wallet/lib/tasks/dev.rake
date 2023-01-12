@@ -5,8 +5,8 @@ namespace :dev do
         show_spinner("Apagando BD...") { %x(rails db:drop) }
         show_spinner("Criando BD...") { %x(rails db:create) }
         show_spinner("Migrando BD...") { %x(rails db:migrate) }   
-        %x(rails dev:add_coins)
         %x(rails dev:add_mining_types)
+        %x(rails dev:add_coins)
     else
       puts "Você não está em ambiente de desenvolvimento."
     end
@@ -20,22 +20,24 @@ namespace :dev do
         {
             description: "Bitcoin",
             acronym: "BTC",
-            url_image: "https://static.vecteezy.com/system/resources/previews/008/505/801/original/bitcoin-logo-color-illustration-png.png"
+            url_image: "https://static.vecteezy.com/system/resources/previews/008/505/801/original/bitcoin-logo-color-illustration-png.png",
+            mining_type: MiningType.find_by(acronym: 'PoW')
         }, 
         {
             description: "Ethereum",
             acronym: "ETH",
-            url_image: "https://img1.gratispng.com/20180428/jfq/kisspng-ethereum-bitcoin-cryptocurrency-blockchain-dash-5ae45ba1a60e29.8298861115249151056802.jpg"
+            url_image: "https://img1.gratispng.com/20180428/jfq/kisspng-ethereum-bitcoin-cryptocurrency-blockchain-dash-5ae45ba1a60e29.8298861115249151056802.jpg",
+            mining_type: MiningType.all.sample
         }, 
         {
             description: "Dash",
             acronym: "DASH",
-            url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEMpN2ksQDiqRSTbsT7VcFFgSWyRiVUzyLZsCOiNg9HA&s"
+            url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEMpN2ksQDiqRSTbsT7VcFFgSWyRiVUzyLZsCOiNg9HA&s",
+            mining_type: MiningType.all.sample
         }   
       ]
 
         coins.each do |coin|
-        sleep(2)
         Coin.find_or_create_by!(coin)
        end
       end
