@@ -211,6 +211,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  i18n
   jbuilder (~> 2.7)
   listen (~> 3.3)
   puma (~> 5.0)
