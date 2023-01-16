@@ -1,12 +1,14 @@
 body {
-  background-color: #fff;
-  color: #333;
-  margin: 33px; }
+  background-color: <%= Rails.env.development? ? 'white' : 'red' %>;
+  margin: 33px; 
+  background-image: asset-url('rails1.png');
+  }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px; }
+  line-height: 18px; 
+}
 
 pre {
   background-color: #eee;
