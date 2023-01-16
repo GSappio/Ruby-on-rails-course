@@ -11,13 +11,17 @@
     <%= stylesheet_link_tag 'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
 
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
     <%= stylesheet_link_tag params[:controller], 'data-turbolinks-track': 'reload' %>
 
+    
   </head>
 
   <body>
-  <h1>HEADER</h1>
+  <h1>HEADER - <%= params[:controller] %></h1>
     <%= yield %>
     <h1>FOOTER</h1>
   </body>
