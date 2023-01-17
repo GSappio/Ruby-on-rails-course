@@ -1,5 +1,14 @@
 pt-BR:
-  actual_locale: "Português do Brasil"
+  current_locale: "Português do Brasil"
+  welcome: "Olá! Seja Bem-Vindo!"
+  welcome_msg: "Este é o Crypo Wallet, um app para você cadastrar e acompanhar as suas criptomoedas"
+  menu_msg: "Para começar, selecione uma das opções abaixo:"
+  botao_cadastro: "Cadastrar Moedas"
+  botao_tmineracao: "Tipos de Mineração"
+  msg_apagar: "Você tem certeza?"
+  msg_mining_types: "Tipos de Mineração"
+  new_type: "Novo Tipo de Mineração"
+  link_novo: 'Novo'
   hello: "Olá Mundo"
   links:
     edit: "Editar"

@@ -1,11 +1,11 @@
-<div class="jumbotron">
-  <h1 class="display-4">Seja Bem-Vindo</h1>
-  <p class="lead">Este é o Crypo Wallet, um app para você cadastrar e acompanhar as suas criptomoedas</p>
-  <hr class="my-4">
-  <p>Para começar, selecione uma das opções abaixo.</p>
-  <p class="lead">
-   <%= render "menu" %>    
-  </p>
+<div class="card" style="width: 50rem; left: 25%; top: 5em;" >
+    <div class="card-body">
+      <h1 class="card-title"><%= t('welcome') %></h1>
+         <p class="card-text"><%= t('welcome_msg')%></p>
+         <hr/>
+         <p><%= t('menu_msg')%></p>
+         <p class="lead">
+         <%= render "menu" %>    
+         </p>
+    </div>
 </div>
-
-
