@@ -8,7 +8,7 @@
 
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
 
 
@@ -21,8 +21,22 @@
   </head>
 
   <body>
-  <h1>HEADER - <%= params[:controller] %></h1>
+    <div class="container-fluid">
+      <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Portuguẽs', root_path(locale: 'pt-BR'), class:"nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'English', root_path(locale: 'en'), class:"nav-link"%>
+      </li>
+    </ul>
+      </div>
+    </div>
+  </nav>
     <%= yield %>
-    <h1>FOOTER</h1>
+    </div>
   </body>
 </html>
