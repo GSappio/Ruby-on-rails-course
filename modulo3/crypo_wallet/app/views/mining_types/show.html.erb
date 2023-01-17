@@ -3,12 +3,12 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @mining_type.description %>
+  <%= @mining_type.description, class:"form-control" %>
 </p>
 
 <p>
   <strong>Acronym:</strong>
-  <%= @mining_type.acronym %>
+  <%= @mining_type.acronym, class:"form-control" %>
 </p>
 
 <%= link_to 'Edit', edit_mining_type_path(@mining_type), class:"btn btn-primary" %> 

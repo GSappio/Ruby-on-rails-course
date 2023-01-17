@@ -10,6 +10,8 @@ pt-BR:
   new_type: "Novo Tipo de Mineração"
   link_novo: 'Novo'
   editing_coin: "Editando Moeda"
+  new_coin: "Nova Moeda"
+  editing_mining: "Editando Tipo de Mineração"
   hello: "Olá Mundo"
   links:
     edit: "Editar"
