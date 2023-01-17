@@ -9,6 +9,7 @@ pt-BR:
   msg_mining_types: "Tipos de Mineração"
   new_type: "Novo Tipo de Mineração"
   link_novo: 'Novo'
+  editing_coin: "Editando Moeda"
   hello: "Olá Mundo"
   links:
     edit: "Editar"

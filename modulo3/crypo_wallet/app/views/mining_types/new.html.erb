@@ -2,7 +2,7 @@
 
 <h1><%= t('new_type')%></h1>
 
-<%= render 'form', mining_type: @mining_type %>
-
+<%= render 'form', mining_type: @mining_type, class:"btn btn-primary" %>
+<br/>
 <%= link_to 'Back', mining_types_path, class:"btn btn-primary" %>
 </div>

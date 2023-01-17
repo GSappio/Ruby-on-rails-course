@@ -39,6 +39,7 @@ en:
   msg_apagar: "Are you sure?"
   msg_mining_types: "Mining Types"
   new_type: "New Mining Type"
+  editing_coin: "Editing Coin"
   link_novo: 'New'
   hello: "Hello world"
   links:
