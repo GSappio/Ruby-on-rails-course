@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Time2</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TimeToAnswer</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application' %>
-    <%= stylesheet_link_tag 'admins_backoffice' %>
+   <%= stylesheet_link_tag    'application' %>
+   <%= stylesheet_link_tag    'admins_backoffice' %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,6 +23,7 @@
     <![endif]-->
 
 </head>
+
 <body>
 
     <div id="wrapper">
@@ -365,7 +365,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">LAYOUT ADMINS BACKOFFICE</h1>
-                         <%= yield %>
+                          <%= yield %>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -376,9 +376,10 @@
         <!-- /#page-wrapper -->
 
     </div>
-    <!-- /#wrapper -->  
+    <!-- /#wrapper -->
 
-    <%= javascript_pack_tag  'application' %>
+     <%= javascript_include_tag 'application' %>
+     <%= javascript_include_tag 'admins_backoffice' %>
 
 </body>
 
