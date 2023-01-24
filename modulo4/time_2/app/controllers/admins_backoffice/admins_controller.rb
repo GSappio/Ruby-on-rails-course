@@ -7,6 +7,19 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
     @admins = Admin.all
   end
 
+  def new
+    @admin = Admin.new
+  end
+
+  def create
+    @admin = Admin.new(params_admin)
+    if @admin.save
+      redirect_to admins_backoffice_admins_path, notice: "Administrador cadastrado com sucesso!"  
+    else 
+      render :new
+    end
+  end
+
   def edit
   end
 
@@ -20,7 +33,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
   end
 
   private
-  
+
   def params_admin 
     params_admin = params.require(:admin).permit(:email, :password, :password_confirmation)
   end
