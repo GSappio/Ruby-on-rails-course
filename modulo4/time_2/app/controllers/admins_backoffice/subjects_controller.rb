@@ -1,4 +1,4 @@
-class AdminsBackoffice:SubjectsController < AdminsBackofficeController
+class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
     before_action :set_subject, only: [:edit, :update, :destroy]
   
