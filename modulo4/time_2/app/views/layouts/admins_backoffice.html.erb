@@ -37,7 +37,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Backoffice Administrativo</a>
+                <a class="navbar-brand" href="index.html">Backoffice Admintrativo</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -49,8 +49,8 @@
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
-                            <%= link_to destroy_admin_session_path, method: :delete do %>
-                               <i class="fa fa-sign-out fa-fw"></i> Sair
+                        <%= link_to destroy_admin_session_path, method: :delete do %>
+                            <i class="fa fa-sign-out fa-fw"></i> Sair
                         <% end %>
                         </li>
                     </ul>
@@ -65,29 +65,26 @@
                     <ul class="nav" id="side-menu">
                         <li>
                             <%= link_to admins_backoffice_welcome_index_path do %>
-                                <i class="fa fa-dashboard fa-fw"></i> Dashboard
+                            <i class="fa fa-dashboard fa-fw"></i> Dashboard
                             <% end %>
                         </li>
 
                         <li>
                             <%= link_to admins_backoffice_admins_path do %>
-                                <i class="fa fa-users fa-fw"></i> Administradores
+                            <i class="fa fa-users fa-fw"></i> Administradores
                             <% end %>
                         </li>
 
                          <li>
                             <%= link_to admins_backoffice_subjects_path do %>
-                                <i class="fa fa-file-text-o fa-fw"></i> Assuntos/Áreas
+                            <i class="fa fa-file-text-o fa-fw"></i> Assuntos/Áreas
                             <% end %>
                         </li>
-
-                         <li>
+                        
+                        <li>
                             <%= link_to admins_backoffice_questions_path do %>
-                                <i class="fa fa-th-list fa-fw"></i> Perguntas
+                            <i class="fa fa-th-list fa-fw"></i> Perguntas
                             <% end %>
-                        </li>
-
-                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -101,7 +98,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                          <%= yield %>
+                        <%= yield %>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -116,17 +113,20 @@
 
      <%= javascript_include_tag 'application' %>
      <%= javascript_include_tag 'admins_backoffice' %>
-     
-     <% if notice %>
-            <%= javascript_tag do %>
-                $.bootstrapGrowl("<%= notice %>", {
-                type: 'success', // (null, 'info', 'danger', 'success')
-                align: 'right', // ('left', 'right', or 'center')
-                allow_dismiss: true, // If true then will display a cross to close the popup.
-                stackup_spacing: 10 // spacing between consecutively stacked growls.
+
+    <% if notice %>
+        <%= javascript_tag do %>
+                $.bootstrapGrowl('<%= notice %>', {
+                type: 'success',
+                align: 'right',
+                allow_dismiss: true,
+                stackup_spacing: 10
                 });
-            <% end %>
         <% end %>
+    <% end %>
 </body>
 
 </html>
+
+
+ 
