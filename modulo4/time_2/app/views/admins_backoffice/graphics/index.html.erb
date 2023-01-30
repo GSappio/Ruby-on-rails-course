@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Gráfico Administradores</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+  <div class="col-lg-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Administradores:
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+                    <div id="morris-donut-chart"><svg height="347.44317626953125" version="1.1" width="411.6051025390625" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.58237px; top: -0.522719px;">
+                    <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                    </desc>
+                    
+                    <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                    </defs>
+                    <!-- SEGUNDO NO SENTIDO HORÁRIO -->
+                    <path fill="none" stroke="#0b62a4" d="M205.80255126953125,287.4147542317708A110.96590169270833,110.96590169270833,0,0,0,310.56843965617315,213.02124607617606" stroke-width="2" opacity="0" 
+                    style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0    ;">
+                    </path>
+    
+                    <path fill="#0b62a4" stroke="#ffffff" d="M205.80255126953125,290.4147542317708A113.96590169270833,113.96590169270833,0,0,0,313.40082023764484,214.00999287981287L358.2307495470412,229.65953150533818A161.4488525390625,161.4488525390625,0,0,1,205.80255126953125,337.897705078125Z" 
+                    stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                    <%= Admin.all.count %>
+
+                    </path>
+                        <!-- SEGUNDO NO SENTIDO HORÁRIO -->
+                        
+                    <!-- PRIMEIR NO SENTIDO HORÁRIOO -->
+                    <path fill="none" stroke="#3980b5" d="M310.56843965617315,213.02124607617606A110.96590169270833,110.96590169270833,0,0,0,106.25843070752634,127.41417705310826" stroke-width="2"
+                    opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;">
+                    </path>
+                    
+                    <path fill="#3980b5" stroke="#ffffff" d="M313.40082023764484,214.00999287981287A113.96590169270833,113.96590169270833,0,0,0,103.56722235315276,126.08850831871426L56.48637042652388,102.89683931013116A166.4488525390625,166.4488525390625,0,0,1,362.95138384949405,231.30744284473286Z"
+                    stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                    </path>
+                    
+                    <path fill="none" stroke="#679dc6" d="M106.25843070752634,127.41417705310826A110.96590169270833,110.96590169270833,0,0,0,205.76769030394914,287.4147487558231" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;">
+                    </path>
+
+                        <!-- PRIMEIR NO SENTIDO HORÁRIOO -->
+                        <!-- TERCEIR NO SENTIDO HORÁRIOO -->
+                    <path fill="#679dc6" stroke="#ffffff" d="M103.56722235315276,126.08850831871426A113.96590169270833,113.96590169270833,0,0,0,205.76674782616854,290.4147486077791L205.751830617459,337.89769711094357A161.4488525390625,161.4488525390625,0,0,1,60.97171768381318,105.10628720078783Z" stroke-width="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                    </path>
+                        <!-- TERCEIR NO SENTIDO HORÁRIOO -->
+                    <text x="205.80255126953125" y="166.4488525390625" text-anchor="middle" font-family="&quot;Arial&quot;" 
+                    font-size="15px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 15px; font-weight: 800;" 
+                    font-weight="800" transform="matrix(1.9965,0,0,1.9965,-205.0896,-174.0257)" stroke-width="0.5008676271137549"><tspan dy="5.454549789428711" 
+                    style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Cadastrados</tspan>
+                    </text>
+                    
+                    <text x="205.80255126953125" y="186.4488525390625" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="14px" stroke="none"
+                    fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 14px;"
+                    transform="matrix(2.3934,0,0,2.3934,-286.7616,-249.0275)" stroke-width="0.4178187565362521">
+                    <tspan dy="5.000007152557373" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                            <%= Admin.all.count %>
+                    </tspan>
+                    </text>
+                </svg>
+                <div class="text-center">
+                     <%= link_to admins_backoffice_admins_path, class:"btn btn-danger" do %>
+                        Excluir um Administradores
+                    <% end %>
+                    </div>
+            </div>
+        </div>
+        <!-- /.panel-body -->
+    </div>
+</div>
+</div>

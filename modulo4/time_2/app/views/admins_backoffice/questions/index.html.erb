@@ -9,10 +9,10 @@
   <table class="table table-striped table-bordered table-hover">
       <thead>
           <tr>
-              <th>#</th>
-              <th> <%= translate_attribute(@questions, :description) %> </th>
-              <th> <%= translate_attribute(@questions, :subject) %> </th>
-              <th>
+              <th class="text-center">#</th>
+              <th class="text-center"> <%= translate_attribute(@questions, :description) %> </th>
+              <th class="text-center"> <%= translate_attribute(@questions, :subject) %> </th>
+              <th class="text-center" >
                 <%= link_to new_admins_backoffice_question_path, class:"btn btn-success btn-circle" do %>
                   <i class="fa fa-plus"></i>
                 <% end %>
@@ -22,10 +22,10 @@
       <tbody>
           <% @questions.each do |question| %>
           <tr>
-              <td><%= question.id %></td>
-              <td><%= question.description.truncate(50) %></td>
-              <td><%= question.subject.description.truncate(30) %></td>
-              <td style="width: 100px">
+              <td class="text-center"><%= question.id %></td>
+              <td><%= question.description.truncate(100) %></td>
+              <td class="text-center"><%= question.subject.description.truncate(30) %></td>
+              <td style="width: 100px" class="text-center">
 
                 <%= link_to edit_admins_backoffice_question_path(question), class:"btn btn-primary btn-circle" do %>
                   <i class="fa fa-edit"></i>

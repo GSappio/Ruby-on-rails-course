@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :admins, except: [:delete] # Administradores
     resources :subjects # Assuntos/Áreas
     resources :questions # Perguntas
+    resources :graphics # Gráficos
   end
   
   devise_for :admins
