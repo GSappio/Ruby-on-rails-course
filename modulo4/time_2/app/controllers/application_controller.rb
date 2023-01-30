@@ -1,11 +1,13 @@
 class ApplicationController < ActionController::Base
     layout :layout_by_resource
 
-    private
-
+    protected 
+    
     def layout_by_resource
-        puts ">>>>>>>>>>> #{devise_controller?}" 
-        puts ">>>>>>>>>>> #{resource_class}"
-        "application"       
+        if devise_controller? && resouce_class == Admin
+            "admin_devise"
+        else
+            "application"
+        end
     end
 end
