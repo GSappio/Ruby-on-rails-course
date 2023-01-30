@@ -61,10 +61,14 @@
                     </text>
                 </svg>
                 <div class="text-center">
-                     <%= link_to admins_backoffice_admins_path, class:"btn btn-danger" do %>
-                        Excluir um Administradores
+                    <%= link_to new_admins_backoffice_admin_path, class:"btn btn-success" do %>
+                        Criar
+                    <% end %>
+                     <%= link_to admins_backoffice_admins_path, class:"btn btn-primary" do %>
+                        Listar
                     <% end %>
                     </div>
+                    
             </div>
         </div>
         <!-- /.panel-body -->
