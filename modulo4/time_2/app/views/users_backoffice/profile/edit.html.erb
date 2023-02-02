@@ -92,7 +92,7 @@
 				<div class="form-group">
 					<%= profile_form.label :birthdate, class:"col-form-label col-md-3 col-sm-3 label-align" %>
 					<div class="col-md-6 col-sm-6 col-xs-12">
-						<%= profile_form.text_field :birthdate, class:"form-control col-md-7 col-xs-12" %>
+					<%= profile_form.text_field :birthdate, value: l(@user.user_profile.birthdate), class:"form-control col-md-7 col-xs-12 datepicker" %>
 					</div>
 				</div>
 
@@ -116,10 +116,11 @@
 				</div>
 				
 
-			<div class="ln_solid"></div>
+			<div class="ln_solid">
 			<div class="item form-group">
 				<div class="col-md-6 col-sm-6 offset-md-3">
-					<button type="submit" class="btn btn-success">Enviar</button>
+					<button type="submit" class="btn btn-success btn-block " style="width: 350px; position: absolute; left: 340px;">Enviar</button>
+				</div>
 				</div>
 			</div>
 
