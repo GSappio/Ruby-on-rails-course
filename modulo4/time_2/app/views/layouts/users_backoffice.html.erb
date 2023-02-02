@@ -202,5 +202,17 @@
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'users_backoffice' %>
+
+        <% if notice %>
+        <%= javascript_tag do %>
+                $.bootstrapGrowl('<%= notice %>', {
+                type: 'success',
+                align: 'right',
+                allow_dismiss: true,
+                stackup_spacing: 10
+                });
+                
+        <% end %>
+    <% end %>
   </body>
 </html>
