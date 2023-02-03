@@ -4,24 +4,34 @@ element.classList.remove('btn-default');
 element.classList.remove('btn-success');
 element.classList.remove('btn-danger');
 
-
-if  (<%= @answer.correct %>) {
-    element.classList.add('btn-success');
-
-    $.bootstrapGrowl('Você acertou!', {
-        type: 'success',
-        align: 'right',
-        allow_dismiss: true,
-        stackup_spacing: 10
-        });
-        
+if (<%= @answer.correct %>) {
+  element.classList.add('btn-success');
+  $.bootstrapGrowl('Você acertou! \\o/', {
+    type: 'success', // (null, 'info', 'danger', 'success')
+    align: 'right', // ('left', 'right', or 'center')
+    allow_dismiss: true, // If true then will display a cross to close the popup.
+    stackup_spacing: 10 // spacing between consecutively stacked growls.
+    });
 } else {
-    element.classList.add('btn-danger');
-
-    $.bootstrapGrowl('Você errou!', {
-        type: 'danger',
-        align: 'right',
-        allow_dismiss: true,
-        stackup_spacing: 10
-        });
+  element.classList.add( 'btn-danger');
+  $.bootstrapGrowl('Você errou! :(', {
+    type: 'danger', // (null, 'info', 'danger', 'success')
+    align: 'right', // ('left', 'right', or 'center')
+    allow_dismiss: true, // If true then will display a cross to close the popup.
+    stackup_spacing: 10 // spacing between consecutively stacked growls.
+    });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

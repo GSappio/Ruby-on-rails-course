@@ -1,36 +1,31 @@
 <div>
+      <div class="login_wrapper">
+        <div class="animate form login_form">
+          <section class="login_content">
+           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <h1>Login</h1>
+              <div>
+                <%= f.email_field :email, autofocus: true, placeholder:"Email", class:"form-control" %>
+              </div>
 
-  <div class="login_wrapper">
-      <div class="animate form login_form">
-         <section class="login_content">
-                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <div>
+                <%= f.password_field :password, placeholder:"Password", class:"form-control" %>
+              </div>
 
-                <h1 class="text-primary">Cadastrar-se</h1>
+              <div>
+                <%= f.password_field :password_confirmation, placeholder:"Confirmation Password", class:"form-control" %>
+              </div>
 
-                <div>
-                  <%= f.email_field :email, autofocus: true, placeholder:"E-mail", class:"form-control" %>
-                </div>
+              <div>
+                <%= f.submit "Sign up", class:"btn btn-default submit", style: "float: none; margin-left: 0px; width: 50%;" %>
+              </div>
 
-                <div>
-                  <%= f.password_field :password, placeholder: "Senha", class:"form-control" %>
-                </div>
-
-                <div>
-                  <%= f.password_field :password_confirmation, placeholder: "Confirmação da senha", class:"form-control" %>
-                </div>
-
-                <div>
-                  <%= f.submit "Cadastrar-se", class:"btn btn-primary submit", style:"float: none; margin-left: 0px; width: 100%" %>
-                </div>
-
-                <div class="clearfix"></div>
-                
-                <div class="separator">
-          
-            </div>
-          </div>
-        <% end %>
-      </section>
+              <div class="clearfix"></div>
+         
+              <div class="separator"></div>
+            <% end %>
+          </section>
+        </div>
+      </div>
     </div>
-  </div>
-</div>  
+

@@ -4,12 +4,12 @@ class ApplicationController < ActionController::Base
   
   protected
   
-    def layout_by_resource
-      devise_controller? ? "#{resource_class.to_s.downcase}_devise" : "application"
+  def layout_by_resource
+     devise_controller? ? "#{resource_class.to_s.downcase}_devise" : "application"
   end
 
   def check_pagination
-    unless user_signed_in? 
+    unless user_signed_in?
       params.extract!(:page)
     end
   end

@@ -6,10 +6,10 @@
         other: Administradores
       user:
         one: Usuário
-        other: Usuários
+        other: Usuários  
       subject:
         one: Assunto
-        other: Assuntos
+        other: Assuntos 
       question:
         one: Pergunta
         other: Perguntas
@@ -27,14 +27,13 @@
         first_name: Nome
         last_name: Sobrenome
         password: Senha
-        password_confirmation: Confirmação da Senha
         created_at: Criado em
         updated_at: Atualizado em
-      user_profile:
+      profile_user:
         id: Código
         address: Endereço
         gender: Sexo
-        birthdate: Data de Nascimento
+        birthdate: Sobrenome
         created_at: Criado em
         updated_at: Atualizado em
       subject:
@@ -47,5 +46,5 @@
         description: Descrição
         subject: Assunto
         subject_id: Assunto
-        created_it: Criado em
+        created_at: Criado em
         updated_at: Atualizado em

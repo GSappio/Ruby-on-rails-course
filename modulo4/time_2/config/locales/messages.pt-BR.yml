@@ -3,4 +3,4 @@
     editing: Editando %{model}
     new: Novo %{model}
     listing: Listando %{model}
-    confirm_with: Você deseja realmente excluir [%{item}]
+    confirm_with: Você deseja excluir? [%{item}] 
