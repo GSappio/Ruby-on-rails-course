@@ -1,12 +1,11 @@
 class UserStatistic < ApplicationRecord
   belongs_to :user
 
-  # Virtual Attributes
   def total_questions
     self.right_questions + self.wrong_questions
   end
 
-  # Class Methods ....... só add o self
+  # Class Methods
   def self.set_statistic(answer, current_user)
     if !!current_user
       user_statistic = UserStatistic.find_or_create_by(user: current_user)

@@ -1,3 +1,8 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+# Utilize-o em 'config/locales/', com o nome de 'devise.pt-BR.yml'.
+# Em 'config/application.rb', utilize => config.i18n.default_locale = :'pt-BR'
+
 pt-BR:
   devise:
     confirmations:
@@ -24,7 +29,7 @@ pt-BR:
       password_change:
         subject: "Senha modificada"
     omniauth_callbacks:
-      failure: "Não foi possível autenticá-lo em %{kind} por causa de \"%{reason}\"."
+      failure: 'Não foi possível autenticá-lo em %{kind} por causa de "%{reason}".'
       success: "Autenticado com sucesso em %{kind}."
     passwords:
       no_token: "Você não pode acessar essa página para redefinir sua senha. Se você recebeu um e-mail para redefinir sua senha, por favor, certifique-se de estar usando a URL correta."

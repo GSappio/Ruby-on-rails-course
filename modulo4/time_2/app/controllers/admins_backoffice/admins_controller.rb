@@ -1,58 +1,58 @@
 class AdminsBackoffice::AdminsController < AdminsBackofficeController
   before_action :verify_password, only: [:update]
   before_action :set_admin, only: [:edit, :update, :destroy]
-
   def index
     @admins = Admin.all.page(params[:page])
   end
 
-  def new 
-    @admin = Admin.new  
+  def new
+     @admin = Admin.new
   end
 
   def create
-    @admin = Admin.new(params_admin) 
+    @admin = Admin.new(params_admin)
     if @admin.save
       redirect_to admins_backoffice_admins_path, notice: "Administrador cadastrado com sucesso!"
     else
       render :new
     end
   end
-
   def edit
+   @admin = Admin.find(params[:id])
   end
+  def update
+    if params[:admin][:password].blank? && params[:admin][:password_confirmation].blank?
+      params[:admin].extract!(:password, :password_confirmation)
+    end  
 
-  def update  
+    @admin = Admin.find(params[:id])
+    params_admin = params.require(:admin).permit(:email, :password, :password_confirmation)
+
     if @admin.update(params_admin)
-      AdminMailer.update_email(current_admin, admin).deliver_now
+      AdminMailer.update_email(current_admin, @admin).deliver_now
       redirect_to admins_backoffice_admins_path, notice: "Administrador atualizado com sucesso!"
     else
       render :edit
-    end
   end
+end
 
-  def destroy 
-    if @admin.destroy
-      redirect_to admins_backoffice_admins_path, notice: "Administrador excluido com sucesso!"
-    else
-      render :index
-    end
+def destroy
+  if @admin.destroy
+    redirect_to admins_backoffice_admins_path, notice: "Administrador apagado com sucesso!"
+  else
+    render :index
   end
-
-  private
-
-  def params_admin 
+end
+private
+  def params_admin
     params.require(:admin).permit(:email, :password, :password_confirmation)
   end
-
-  def set_admin 
+  def set_admin
     @admin = Admin.find(params[:id])
   end
-
   def verify_password
-    if params[:admin][:password].blank? && params[:admin][:password_confirmation].blank? 
+    if params[:admin][:password].blank? && params[:admin][:password_confirmation].blank?
       params[:admin].extract!(:password, :password_confirmation)
     end
   end
 end
-

@@ -1,11 +1,12 @@
 class UsersBackofficeController < ApplicationController
+    UsersBackofficeController
     before_action :authenticate_user!
     before_action :build_profile
     layout 'users_backoffice'
 
-    private 
+    private
 
-    def build_profile
-        current_user.build_user_profile if current_user.user_profile.blank? 
-    end
+  def build_profile
+    current_user.build_user_profile if current_user.user_profile.blank?
+  end
 end

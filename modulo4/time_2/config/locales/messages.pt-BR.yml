@@ -1,6 +1,6 @@
-'pt-BR':
-  message:
+"pt-BR":
+  messages:
     editing: Editando %{model}
     new: Novo %{model}
     listing: Listando %{model}
-    confirm_with: Você deseja excluir? [%{item}] 
+    confirm_with: Você deseja realmente excluir [%{item}]

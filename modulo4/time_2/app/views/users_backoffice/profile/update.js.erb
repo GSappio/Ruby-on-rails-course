@@ -4,10 +4,9 @@ document.getElementById('imgAvatarLg').src = "<%= url_for(@user.user_profile.ava
 document.getElementById('imgAvatarMd').src = "<%= url_for(@user.user_profile.avatar) %>"
 document.getElementById('imgAvatarSm').src = "<%= url_for(@user.user_profile.avatar) %>"
 
-
 $.bootstrapGrowl('Avatar atualizado com sucesso!', {
-  type: 'success',
-  align: 'right',
-  allow_dismiss: true,
-  stackup_spacing: 10
+  type: 'success', // (null, 'info', 'danger', 'success')
+  align: 'right', // ('left', 'right', or 'center')
+  allow_dismiss: true, // If true then will display a cross to close the popup.
+  stackup_spacing: 10 // spacing between consecutively stacked growls.
 }); 

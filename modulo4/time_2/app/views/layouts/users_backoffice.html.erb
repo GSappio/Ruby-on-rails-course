@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>TimeToAnswer</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application' %>
     <%= stylesheet_link_tag    'users_backoffice' %>
 
@@ -30,11 +30,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <%= link_to image_tag( avatar_url, alt:"...", class:"img-circle profile_img", id:"imgAvatarMd"), '#', "data-toggle":"modal","data-target":"#avatarModal" %>
+                <%= link_to image_tag(avatar_url, alt:"...", class:"img-circle profile_img", id:"imgAvatarMd"), '#', "data-toggle":"modal", "data-target":"#avatarModal" %>
               </div>
               <div class="profile_info">
-                <span>Seja Bem-Vindo,</span>
-                <h2><%= current_user.full_name %></h2>
+                <span>Seja Bem Vindo</span>
+                <h2><%= current_user.full_name%> </h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -45,13 +45,12 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">                  
-                  <li>
+                 <li>
                     <%= link_to users_backoffice_welcome_index_path do %>
-                      <i class="fa fa-home"></i>Inicio
+                      <i class="fa fa-home"></i>Início
                     <% end %>
                   </li>
-
-                   <li>
+                  <li>
                     <%= link_to users_backoffice_profile_path do %>
                       <i class="fa fa-user"></i>Dados do Perfil
                     <% end %>
@@ -92,7 +91,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <%= image_tag avatar_url, alt:'', id:"imgAvatarSm" %>
+                  <%= image_tag avatar_url, alt:'', id:"imgAvatarSm" %>
                     <%= current_user.email %>
                     <span class=" fa fa-angle-down"></span>
                   </a>
@@ -184,10 +183,10 @@
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
-                <%= yield %>
-              </div>
+              <%= yield %>
             </div>
           </div>
+        </div>
         <!-- /page content -->
 
         <!-- footer content -->
@@ -201,53 +200,52 @@
       </div>
     </div>
 
-  <!-- Modal -->
-      <div class="modal fade" id="avatarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-sm" role="document">
-          <div class="modal-content">
-          <%= form_with(url: users_backoffice_profile_path, model: current_user , class:"form-horizontal form-label-left") do |form| %>
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Avatar</h4>
-            </div>
-            <div class="modal-body">
-              <%= form.fields_for :user_profile do |profile_form| %>
+      <!-- Modal -->
+    <div class="modal fade" id="avatarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        <%= form_with(url: users_backoffice_profile_path, model: current_user, class:"form-horizontal form-label-left") do |form| %>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Avatar</h4>
+          </div>
+          <div class="modal-body">
+            <%= form.fields_for :user_profile do |profile_form|  %>
               <div class="form-group">
                 <%= profile_form.label :avatar %>
-                <%= image_tag(avatar_url, alt:"...", class:"img-circle profile_img", id:"imgAvatarLg")%>
+                <%= image_tag(avatar_url, alt:"...", class:"img-circle profile_img", id:"imgAvatarLg") %>
                 <%= profile_form.file_field :avatar %>
               </div>
-              <% end %>
-            </div>
-            <div class="modal-footer">
-              <%= form.submit "Salvar", class:"btn btn-primary" %>
-            </div>
             <% end %>
           </div>
+          <div class="modal-footer">
+            <%= form.submit "Salvar", class:"btn btn-primary" %>
+          </div>
+        <% end %>
         </div>
       </div>
-  <!-- /Modal -->
+    </div>
+    <!-- /Modal -->
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'users_backoffice' %>
 
-
     <% if notice %>
-      <%= javascript_tag do %>
-          $.bootstrapGrowl('<%= notice %>', {
-          type: 'success',
-          align: 'right',
-          allow_dismiss: true,
-          stackup_spacing: 10
-          });
-      <% end %>
+        <%= javascript_tag do %>
+            $.bootstrapGrowl('<%= notice %>', {
+            type: 'success', // (null, 'info', 'danger', 'success')
+            align: 'right', // ('left', 'right', or 'center')
+            allow_dismiss: true, // If true then will display a cross to close the popup.
+            stackup_spacing: 10 // spacing between consecutively stacked growls.
+            });
+        <% end %>
     <% end %>
 
+        <%= javascript_tag do %>
+       $(function() {
+         $('.datepicker').datepicker();
+       });
+    <% end  %>
 
-    <%= javascript_tag do %>
-      $(function() {
-        $('.datepicker').datepicker();
-      });
-    <% end %>
   </body>
 </html>
