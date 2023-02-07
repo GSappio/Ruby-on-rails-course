@@ -92,7 +92,14 @@ desc "Adiciona perguntas e respostas"
     end
   end
 
-
+  desc "Adiciona todas as respostas no Redis"
+  task add_answers_to_redis: :environment do
+    show_spinner("Adicionando todas as respostas no Redis...") do
+      Answer.find_each do |answer|
+        Rails.cache.write(answer.id, "#{answer.question_id}@@#{answer.correct}" )
+      end
+    end
+  end
 
   private
 
